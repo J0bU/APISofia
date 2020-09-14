@@ -50,4 +50,24 @@ userController.createPerson = async (req, res) => {
 
 };
 
+
+userController.getUsers = async (req, res) => {
+
+    const allUsers =  await Persona.find();
+    
+    if(!allUsers){
+        return res.json({
+            ok:false,
+            message: 'No se encontraron usuarios'
+        });
+    }
+
+    
+    return res.json({
+        ok:true,
+        message: 'Se han encontrado usuarios',
+        usuarios: allUsers
+    });
+};
+
 module.exports = userController;

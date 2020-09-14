@@ -12,7 +12,10 @@ router.use(require('./city.routes'));
 router.get('/', (req, res) => {
     res.json({
             ok:true,
-            message: 'index page here rolix'
+            message: 'ASFGSFG',
+            otrosatributos: "VALOR",
+            otro: true,
+            test: 24
         });
 });
 

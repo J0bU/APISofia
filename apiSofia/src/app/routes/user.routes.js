@@ -2,7 +2,7 @@
 
 
 const {Router} = require('express');
-const {createPerson,pagePerson} = require('../controllers/user.controllers');
+const {createPerson,pagePerson,getUsers} = require('../controllers/user.controllers');
 
 // Initializations
 const router = Router();
@@ -11,5 +11,6 @@ const router = Router();
 // User routes
 router.get('/person', pagePerson);
 router.post('/person', createPerson);
+router.get('/person/allusers', getUsers);
 
 module.exports = router;
